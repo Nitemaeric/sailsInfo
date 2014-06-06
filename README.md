@@ -3,7 +3,7 @@
 
 Basic Information and Cheat Sheet for Sails.js
 
-# Controller default actions
+### Controller default actions
 
 ```javascript
 module.exports = {
