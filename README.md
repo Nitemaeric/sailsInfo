@@ -1,5 +1,4 @@
 # **sailsInfo** for V.0.9.*
-<hr />
 
 Basic Information and Cheat Sheet for Sails.js
 
