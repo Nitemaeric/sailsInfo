@@ -15,12 +15,25 @@ module.exports = {
 	},
     
     show: function(req, res){
-    	Model.findOne(req.param('id'), function(err, model){
+    	Model.findOne(req.param('id'), function (err, model) {
         	res.view({
             	model: model
             })
         })
-    }
+    },
+    
+    'new': function(req, res) {
+    	res.view()
+    },
+    
+    edit: function(req, res) {
+    	Model.findOne(req.param('id'), function (err, model) {
+    		if (!model) return next('User doesn\'t exist.')
+            res.view({
+            	model: model
+            })
+        })
+    },
 };
 ```
 	
