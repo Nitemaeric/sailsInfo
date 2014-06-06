@@ -8,13 +8,17 @@ Change "Model", "models", "model" to fit your Model name.
 module.exports = {
 	index: function(req, res) {
 		Model.findAll(function(err, models){
-        	res.view({models: models})
+        	res.view({
+            	models: models
+            })
         })
 	},
     
     show: function(req, res){
     	Model.findOne(req.param('id'), function(err, model){
-        	res.view({model: model})
+        	res.view({
+            	model: model
+            })
         })
     }
 };
