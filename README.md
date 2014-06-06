@@ -34,6 +34,12 @@ module.exports = {
             })
         })
     },
+    
+    create: function(req, res) {
+    	Movie.create(req.params.all(), function(err, movie){
+        	res.redirect('/movie')
+        })
+	}
 };
 ```
 	
